@@ -65,9 +65,13 @@ GEM
       sinatra (>= 1.4.4)
     erubis (2.7.0)
     execjs (2.2.2)
+    firebase (0.2.3)
+      httpclient
+      json
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hike (1.2.3)
+    httpclient (2.6.0.1)
     i18n (0.7.0)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
@@ -171,6 +175,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   delayed_job_active_record
   delayed_job_web
+  firebase
   jbuilder (~> 2.0)
   libxml-ruby
   pg

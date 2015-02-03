@@ -13,7 +13,7 @@
       <description>description 2</description>
       <price>67890</price>
       <address>rue du chemin</address>
-      <bedroom>toto</bedroom>
+      <bedroom>3</bedroom>
       <url>http://www.example.com/bienavendre12</url>
    </property>
    <property>

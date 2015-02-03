@@ -27,6 +27,8 @@ gem 'libxml-ruby'
 
 gem 'delayed_job_web'
 
+gem 'firebase'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

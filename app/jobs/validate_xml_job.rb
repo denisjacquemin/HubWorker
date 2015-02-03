@@ -13,8 +13,10 @@ class ValidateXmlJob < ActiveJob::Base
     document = Nokogiri::XML(open(xmlfilename))
     errors = schema.validate(document)
     
+    Delayed::Worker.logger.debug("ValidateXmlJob####### #{errors.inspect}")
+    
     if errors.empty? # if xml is valid, store the data in db
-      PersistDataJob.perform_later
+      PersistDataJob.perform_later xmlfilename
     else # if xml is invalid store the errors in db
       Delayed::Worker.logger.debug("Errors found to persist: #{errors.inspect}")
       #PersistErrorJob.perform_later errors
