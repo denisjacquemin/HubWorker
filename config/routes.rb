@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   
   get 'hooks/ping', to: 'hooks#ping'
   get 'hooks/handledata', to: 'hooks#handledata'
+  
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

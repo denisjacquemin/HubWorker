@@ -3,5 +3,6 @@ class PersistDataJob < ActiveJob::Base
 
   def perform(*args)
     # Do something later
+    sleep 2
   end
 end
