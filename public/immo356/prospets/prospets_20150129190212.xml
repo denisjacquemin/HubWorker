@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<properties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="prospets.xsd">
+   <prospet>
+      <refagent>cl003</refagent>
+	  <agentid>1234</agentid>
+      <description>description prospet</description>
+      <pricerange>
+		<min>100000</min>
+		<max>150000</max>
+	  </pricerange>
+      <location>voici une adresse</location>
+      <bedroom>2</bedroom>
+   </prospet>
+   <prospet>
+      <refagent>cl005</refagent>
+	  <agentid>1234</agentid>
+      <description>description prospet</description>
+      <pricerange>
+		<max>150000</max>
+	  </pricerange>
+      <location>voici une adresse</location>
+      <bedroom>2</bedroom>
+   </prospet>
+   <prospet>
+      <refagent>cl004</refagent>
+	  <agentid>1234</agentid>
+      <description>description prospet</description>
+      <pricerange>
+		<max>450000</max>
+	  </pricerange>
+      <location>voici une adresse</location>
+      <bedroom>2</bedroom>
+   </prospet>
+   <prospet>
+      <refagent>cl003</refagent>
+	  <agentid>1234</agentid>
+      <description>description prospet</description>
+      <pricerange>
+		<min>100000</min>
+		<max>150000</max>
+	  </pricerange>
+      <location>voici une adresse</location>
+      <bedroom>2</bedroom>
+   </prospet>
+</properties>

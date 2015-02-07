@@ -10,4 +10,18 @@ class HooksController < ApplicationController
     ValidateXmlJob.perform_later params[:xmlfilename] unless params[:xmlfilename].nil? # put new job in the validate_xml_q queue
     render nothing: true, :status => 200
   end
+  
+  # curl -i 'http://localhost:3000/hooks/handleproperties?filename=properties_20150129190212.xml&agent_id=immo356'
+  def handleproperties
+    puts params.inspect
+    ValidatePropertiesXmlJob.perform_later(params[:filename], params[:agent_id]) unless params[:filename].nil? && params[:agent_id].nil?# put new job in the validate_xml_q queue
+    render nothing: true, :status => 200
+  end
+  
+  # curl -i 'http://localhost:3000/hooks/handleprospets?filename=prospets_20150129190212.xml&agent_id=immo356'
+   def handleprospets
+     puts params.inspect
+     ValidatePropspetsXmlJob.perform_later(params[:filename], params[:agent_id]) unless params[:filename].nil? && params[:agent_id].nil?# put new job in the validate_xml_q queue
+     render nothing: true, :status => 200
+   end
 end

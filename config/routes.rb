@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   
   get 'hooks/ping', to: 'hooks#ping'
   get 'hooks/handledata', to: 'hooks#handledata'
+  get 'hooks/handleproperties', to: 'hooks#handleproperties'
+  get 'hooks/handleprospets', to: 'hooks#handleprospets'
   
   match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
 
