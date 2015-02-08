@@ -15,7 +15,7 @@ class HooksController < ApplicationController
   def handleproperties
     
     client = IronWorkerNG::Client.new
-    task_id = client.tasks.create('ValidateXML',
+    task_id = client.tasks.create('54d754d7175bc259a4002341',
                                   {:agent_id    => params[:agent_id],
                                    :entity_type => 'properties',
                                    :file_name   => params[:filename]} )
