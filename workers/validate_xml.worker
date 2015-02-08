@@ -1,0 +1,11 @@
+runtime "ruby"
+
+remote
+
+name "ValidateXML"
+
+exec "validate_xml_worker.rb"
+
+gem 'nokogiri', '1.6.6.2'
+
+dir 'xsd'
