@@ -14,7 +14,7 @@ class HooksController < ApplicationController
   # curl -i 'http://hubworker.herokuapp.com/hooks/handleproperties?filename=properties_20150129190212.xml&agent_id=immo356'
   def handleproperties
     
-    IronWorkerNG::Client.new
+    client = IronWorkerNG::Client.new
     task_id = client.tasks.create('ValidateXML',
                                   {:agent_id    => params[:agent_id],
                                    :entity_type => 'properties',
