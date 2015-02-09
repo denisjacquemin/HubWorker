@@ -12,7 +12,7 @@ class HooksController < ApplicationController
     task_id = client.tasks.create('ValidateXML',
                                   {:agent_id    => params[:agent_id],
                                    :entity_type => params[:entity_type],
-                                   :file_name   => params[:filename]} )
+                                   :file_name   => params[:file_name]} )
                                    
     render nothing: true, :status => 200
   end
@@ -22,7 +22,7 @@ class HooksController < ApplicationController
     task_id = client.tasks.create('SaveData',
                                   {:agent_id    => params[:agent_id],
                                    :entity_type => params[:entity_type],
-                                   :file_name   => params[:filename]} )                             
+                                   :file_name   => params[:file_name]} )                             
     render nothing: true, :status => 200
   end
 
