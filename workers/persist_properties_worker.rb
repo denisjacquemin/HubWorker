@@ -1,9 +1,10 @@
-require ''
+require 'firebase'
 
-base_uri = ENV['FIREBASE_URL']
-firebase = Firebase::Client.new(base_uri)
+firebase = Firebase::Client.new( params['FIREBASE_URL'] )
 
-document = Nokogiri::XML(open(path_to_file))
+path_to_xml = params['FTP_HOST'] + params['agent_id'] + '/' + params['entity_type'] + '/' + params['file_name']
+document = Nokogiri::XML(open( path_to_xml ))
+
 doc_list = document.css("property")
 doc_list.each { |doc|
   payload = build_property_payload(doc, agent_id)

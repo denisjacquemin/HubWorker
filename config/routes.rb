@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   
   get 'hooks/ping', to: 'hooks#ping'
-  get 'hooks/handledata', to: 'hooks#handledata'
-  get 'hooks/handleproperties', to: 'hooks#handleproperties'
-  get 'hooks/handleprospets', to: 'hooks#handleprospets'
+  get 'hooks/validatexml', to: 'hooks#validate_xml'
+  get 'hooks/savedata', to: 'hooks#save_data'
+
   
   match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
 
