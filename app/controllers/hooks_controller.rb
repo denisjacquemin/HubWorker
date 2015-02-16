@@ -4,7 +4,7 @@ class HooksController < ApplicationController
     render text: 'pong', :status => 200
   end
 
-  # http://hubworker.herokuapp.com/hooks/validatexml?filename=properties_20150129190212.xml&agent_id=immo356&entity_type=properties
+  # http://hubworker.herokuapp.com/hooks/validatexml?file_name=properties_20150129190212.xml&agent_id=immo356&entity_type=properties
   # curl -i 'http://localhost:3000/hooks/handleproperties?filename=properties_20150129190212.xml&agent_id=immo356'
   def validate_xml
     
